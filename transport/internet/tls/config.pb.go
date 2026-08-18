@@ -393,8 +393,9 @@ const file_transport_internet_tls_config_proto_rawDesc = "" +
 	"\x05Usage\x12\x10\n" +
 	"\fENCIPHERMENT\x10\x00\x12\x14\n" +
 	"\x10AUTHORITY_VERIFY\x10\x01\x12\x13\n" +
-	"\x0fAUTHORITY_ISSUE\x10\x02\"\xca\x06\n" +
-	"\x06Config\x12J\n" +
+	"\x0fAUTHORITY_ISSUE\x10\x02\"\xcd\x06\n" +
+	"\x06Config\x12%\n" +
+	"\x0eallow_insecure\x18\x01 \x01(\bR\rallowInsecure\x12J\n" +
 	"\vcertificate\x18\x02 \x03(\v2(.xray.transport.internet.tls.CertificateR\vcertificate\x12\x1f\n" +
 	"\vserver_name\x18\x03 \x01(\tR\n" +
 	"serverName\x12#\n" +

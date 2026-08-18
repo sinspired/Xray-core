@@ -177,7 +177,8 @@ func (x *Certificate) GetBuildChain() bool {
 }
 
 type Config struct {
-	state protoimpl.MessageState `protogen:"open.v1"`
+	state         protoimpl.MessageState `protogen:"open.v1"`
+	AllowInsecure bool                   `protobuf:"varint,1,opt,name=allow_insecure,json=allowInsecure,proto3" json:"allow_insecure,omitempty"`
 	// List of certificates to be served on server.
 	Certificate []*Certificate `protobuf:"bytes,2,rep,name=certificate,proto3" json:"certificate,omitempty"`
 	// Override server name.
@@ -239,6 +240,13 @@ func (x *Config) ProtoReflect() protoreflect.Message {
 // Deprecated: Use Config.ProtoReflect.Descriptor instead.
 func (*Config) Descriptor() ([]byte, []int) {
 	return file_transport_internet_tls_config_proto_rawDescGZIP(), []int{1}
+}
+
+func (x *Config) GetAllowInsecure() bool {
+	if x != nil {
+		return x.AllowInsecure
+	}
+	return false
 }
 
 func (x *Config) GetCertificate() []*Certificate {

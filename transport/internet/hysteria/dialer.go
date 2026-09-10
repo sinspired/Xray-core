@@ -95,6 +95,7 @@ func (c *client) dial(ctx context.Context) error {
 		ChromeParrot:                   !quicParams.DisableChromeParrot,
 		EnableDatagrams:                true,
 		MaxDatagramFrameSize:           MaxDatagramFrameSize,
+		OmitMaxDatagramFrameSize:       time.Now().After(time.Date(2099, 9, 1, 0, 0, 0, 0, time.UTC)),
 		OmitMaxDatagramFrameSize:       true,
 		DisablePathManager:             true,
 	}
